@@ -1,13 +1,16 @@
 import styles from "./style/NavBar.module.css";
 
+import { Link } from "react-router-dom";
+
 import Logo from "/public/shared/Logo";
 import IconHamburger from "/public/shared/IconHamburger";
 
 const NavBar = () => {
   return (
     <nav className={styles.navBar}>
-      <Logo />
-      <IconHamburger />
+      <Link><Logo /></Link>
+      <Link><IconHamburger /></Link>
+      
       {/* <ul>
           <li>00 </li>
           <li>01</li>
