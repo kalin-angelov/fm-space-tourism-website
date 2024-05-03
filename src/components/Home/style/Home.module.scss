@@ -54,3 +54,15 @@
         letter-spacing: 1.25px;
     }
 }
+
+@media screen and (min-width: 798px) {
+    .homeSection {
+        background-image: url("/public/home/background-home-tablet.jpg");
+    }
+}
+
+@media screen and (min-width: 1020px) {
+    .homeSection {
+        background-image: url("/public/home/background-home-desktop.jpg");
+    }
+}
