@@ -5,13 +5,14 @@
   min-height: 100dvh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  flex-wrap: nowrap;
   align-items: center;
 }
 .homeSection .container {
   width: 327px;
   height: 276px;
   text-align: center;
+  margin-top: 90px;
 }
 .homeSection .container .header {
   font-family: "Barlow Condensed", sans-serif;
@@ -20,12 +21,15 @@
   line-height: 1.2;
   letter-spacing: 2.7px;
   text-transform: uppercase;
+  margin-top: 22px;
+  color: #D0D6F9;
 }
 .homeSection .container h1 {
   font-family: "Bellefair", sans-serif;
   font-weight: 400;
   font-size: 80px;
   text-transform: uppercase;
+  margin-top: 22px;
 }
 .homeSection .container .description {
   font-family: "Barlow", sans-serif;
@@ -33,6 +37,8 @@
   font-size: 15px;
   line-height: 25px;
   letter-spacing: -0.3px;
+  margin-top: 24px;
+  color: #D0D6F9;
 }
 .homeSection .exploreBtn {
   border: 1px solid white;
@@ -40,13 +46,12 @@
   width: 150px;
   height: 150px;
   font-size: 23px;
-  padding: 62px 0;
-  text-align: center;
   background-color: white;
   color: black;
   font-family: "Bellefair", sans-serif;
   text-transform: uppercase;
   letter-spacing: 1.25px;
+  margin-top: 104px;
 }
 
 @media screen and (min-width: 798px) {
@@ -57,5 +62,36 @@
 @media screen and (min-width: 1020px) {
   .homeSection {
     background-image: url("/public/home/background-home-desktop.jpg");
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 200px 165px 100px 165px;
+  }
+  .homeSection .container {
+    width: 450px;
+    height: 382px;
+    text-align: start;
+    margin-top: 165px;
+  }
+  .homeSection .container .header {
+    font-size: 28px;
+    letter-spacing: 4.72px;
+  }
+  .homeSection .container h1 {
+    font-size: 150px;
+  }
+  .homeSection .container .description {
+    font-size: 18px;
+    line-height: 32px;
+    letter-spacing: 0;
+  }
+  .homeSection .exploreBtn {
+    width: 274px;
+    height: 274px;
+    font-size: 32px;
+    margin-top: 290px;
+  }
+  .homeSection .exploreBtn:hover {
+    box-shadow: 0px 0px 0px 82px rgba(151, 151, 151, 0.2509803922);
   }
 }/*# sourceMappingURL=Home.module.css.map */
