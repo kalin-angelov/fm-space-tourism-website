@@ -14,7 +14,7 @@ const Home = () => {
           because we’ll give you a truly out of this world experience!
         </p>
       </article>
-      <Link className={styles.exploreBtn} to="#">Explore</Link>
+      <button className={styles.exploreBtn}>Explore</button>
     </section>
   );
 };
