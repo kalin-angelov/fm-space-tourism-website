@@ -1,0 +1,24 @@
+.technologySection {
+    background-image: url("/public/technology/background-technology-mobile.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100dvh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 38px;
+}
+
+@media screen and (min-width: 798px) {
+    .technologySection {
+        background-image: url("/public/technology/background-technology-tablet.jpg");
+    }
+}
+
+@media screen and (min-width: 1020px) {
+    .technologySection {
+        background-image: url("/public/technology/background-technology-desktop.jpg");
+    }
+}
