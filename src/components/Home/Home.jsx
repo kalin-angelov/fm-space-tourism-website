@@ -1,8 +1,9 @@
+import { useNavigate } from "react-router-dom";
 import styles from "./style/Home.module.css";
 
-import { Link } from "react-router-dom";
-
 const Home = () => {
+  const navigate = useNavigate();
+
   return (
     <section className={styles.homeSection}>
       <article className={styles.container}>
@@ -14,7 +15,10 @@ const Home = () => {
           because we’ll give you a truly out of this world experience!
         </p>
       </article>
-      <button className={styles.exploreBtn}>Explore</button>
+      <button 
+        onClick={(e) => {navigate('/destination')}} 
+        className={styles.exploreBtn}
+      >Explore</button>
     </section>
   );
 };

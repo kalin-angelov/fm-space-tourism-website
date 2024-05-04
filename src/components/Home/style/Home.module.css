@@ -65,17 +65,17 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 200px 165px 100px 165px;
   }
   .homeSection .container {
     width: 450px;
     height: 382px;
     text-align: start;
-    margin-top: 165px;
+    margin: 165px 0 50px 50px;
   }
   .homeSection .container .header {
     font-size: 28px;
     letter-spacing: 4.72px;
+    margin: 0;
   }
   .homeSection .container h1 {
     font-size: 150px;
@@ -92,6 +92,7 @@
     margin-top: 290px;
   }
   .homeSection .exploreBtn:hover {
+    transition: 1s;
     box-shadow: 0px 0px 0px 82px rgba(151, 151, 151, 0.2509803922);
   }
 }/*# sourceMappingURL=Home.module.css.map */
