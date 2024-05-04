@@ -1,0 +1,24 @@
+.crewSection {
+    background-image: url("/public/crew/background-crew-mobile.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100dvh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 38px;
+}
+
+@media screen and (min-width: 798px) {
+    .crewSection {
+        background-image: url("/public/crew/background-crew-tablet.jpg");
+    }
+}
+
+@media screen and (min-width: 1020px) {
+    .crewSection {
+        background-image: url("/public/crew/background-crew-desktop.jpg");
+    }
+}
