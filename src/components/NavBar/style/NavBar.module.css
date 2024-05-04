@@ -4,14 +4,100 @@
   padding: 12px 18px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   width: 100%;
 }
 
+@media screen and (min-width: 768px) {
+  .navBar {
+    top: 0;
+    padding: 0;
+    padding-left: 30px;
+  }
+  .navBar hr {
+    display: none;
+  }
+  .navBar .navLinks {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 36px;
+    width: 450px;
+    height: 96px;
+    background-color: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    list-style: none;
+  }
+  .navBar .navLinks li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2.7px;
+    height: auto;
+    border-bottom: 3px solid transparent;
+    height: inherit;
+  }
+  .navBar .navLinks li:active {
+    border-bottom-color: white;
+  }
+  .navBar .navLinks li span {
+    display: none;
+  }
+}
 @media screen and (min-width: 1024px) {
   .navBar {
-    top: 12px;
-    padding: 52px;
+    top: 30px;
+    padding-left: 52px;
+    padding-right: 0;
+  }
+  .navBar hr {
+    display: block;
+    position: relative;
+    z-index: 1;
+    left: 50px;
+    width: 473px;
+    height: 1px;
+    background-color: rgba(225, 225, 225, 0.206);
+    font-size: 0;
+    border: none;
+  }
+  .navBar .navLinks {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 66px;
+    width: 830px;
+    height: 96px;
+    -webkit-backdrop-filter: blur(30px);
+            backdrop-filter: blur(30px);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    list-style: none;
+  }
+  .navBar .navLinks li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-weight: 200;
+    text-transform: uppercase;
+    letter-spacing: 2.7px;
+    height: auto;
+    border-bottom: 3px solid transparent;
+    height: inherit;
+  }
+  .navBar .navLinks li:hover {
+    border-color: rgba(255, 255, 255, 0.372);
+  }
+  .navBar .navLinks li:active {
+    border-bottom-color: white;
+  }
+  .navBar .navLinks li span {
+    display: contents;
+    font-weight: 500;
   }
 }/*# sourceMappingURL=NavBar.module.css.map */

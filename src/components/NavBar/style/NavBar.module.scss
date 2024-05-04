@@ -1,18 +1,116 @@
+@mixin flexRow{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
 .navBar {
     position: absolute;
     top: 5px;
     padding: 12px 18px;
 
-    display: flex;
-    flex-direction: row;
+   @include flexRow();
     justify-content: space-between;
-    align-items: center;
     width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    .navBar {
+        top: 0;
+        padding: 0;
+        padding-left: 30px;
+
+        hr {
+            display: none;
+        }
+
+        .navLinks {
+            @include flexRow();
+            justify-content: center;
+            gap: 36px;
+    
+            width: 450px;
+            height: 96px;
+            background-color: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            list-style: none;
+
+            li {
+                @include flexRow();
+
+                font-size: 14px;
+                font-weight: 400;
+                text-transform: uppercase;
+                letter-spacing: 2.7px;
+                height: auto;
+                border-bottom: 3px solid transparent;
+                height: inherit;
+
+
+                &:active {
+                    border-bottom-color: white;
+                }
+    
+                span{
+                    display: none;
+                }
+            }   
+        }
+    }
 }
 
 @media screen and (min-width: 1024px) {
     .navBar {
-        top: 12px;
-        padding: 52px;
+        top: 30px;
+        padding-left: 52px;
+        padding-right: 0;
+
+        hr {
+            display: block;
+            position: relative;
+            z-index: 1;
+            left: 50px;
+            width: 473px;
+            height: 1px;
+            background-color: rgba(225, 225, 225, 0.206);
+            font-size: 0;
+            border: none;
+        }
+    
+        .navLinks {
+            @include flexRow();
+            justify-content: center;
+            gap: 66px;
+    
+            width: 830px;
+            height: 96px;
+            backdrop-filter: blur(30px);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            list-style: none;
+
+            li {
+                @include flexRow();
+
+                font-weight: 200;
+                text-transform: uppercase;
+                letter-spacing: 2.7px;
+                height: auto;
+                border-bottom: 3px solid transparent;
+                height: inherit;
+
+                &:hover {
+                    border-color: rgba(255, 255, 255, 0.372);
+                }
+
+                &:active {
+                    border-bottom-color: white;
+                }
+    
+                span{
+                    display: contents;
+                    font-weight: 500;
+                }
+            }   
+        }
     }
 }
