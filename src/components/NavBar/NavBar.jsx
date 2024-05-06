@@ -1,13 +1,15 @@
 import styles from "./style/NavBar.module.css";
 
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 import Logo from "/public/shared/Logo";
 import IconHamburger from "/public/shared/IconHamburger";
-import { useEffect, useState } from "react";
+import BurgerMenu from "./BurgerMenu";
 
 const NavBar = () => {
   const [windowWith, setWindowWith] = useState(window.innerWidth);
+  const [showBurgerMenu, setShowBurgerMenu] = useState(false);
 
   useEffect(() => {
     const handleWindowWith = () => {
@@ -22,11 +24,21 @@ const NavBar = () => {
 
   },[]);
 
+  const toggleBetweenIcons = () => {
+    setShowBurgerMenu(!showBurgerMenu);
+  };
+
   return (
     <nav className={styles.navBar}>
       <Link to="/" ><Logo /></Link>
-      {windowWith <= 425 ?
-        <IconHamburger />
+      {windowWith <= 653 ?
+        <div onClick={toggleBetweenIcons}>
+          {showBurgerMenu ?
+            <BurgerMenu />
+            :
+            <IconHamburger />
+          }
+        </div>
         :
         <>
           <hr />
