@@ -9,7 +9,50 @@
   width: 100%;
 }
 
-@media screen and (min-width: 768px) {
+.burgerMenu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 254px;
+  height: 100vh;
+  -webkit-backdrop-filter: blur(30px);
+          backdrop-filter: blur(30px);
+  border: 1px solid black;
+}
+.burgerMenu .closeButton {
+  text-align: right;
+  padding-top: 30px;
+  padding-right: 20px;
+}
+.burgerMenu .burgerMenuNavLinks {
+  list-style: none;
+  padding: 20px 0 20px 10px;
+  margin: 20px 0;
+}
+.burgerMenu .burgerMenuNavLinks li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-transform: uppercase;
+  letter-spacing: 2.7px;
+  height: inherit;
+  border-bottom: 3px solid transparent;
+  font-weight: 200;
+  padding: 17px 6px;
+  margin: 15px 0 15px 10px;
+  height: 31px;
+  border-right: 4px solid white;
+  border-right-color: white;
+}
+.burgerMenu .burgerMenuNavLinks li span {
+  display: contents;
+  font-weight: 500;
+}
+.burgerMenu .burgerMenuNavLinks li:active {
+  border-right-color: white;
+}
+
+@media screen and (min-width: 654px) {
   .navBar {
     top: 0;
     padding: 0;
@@ -34,13 +77,20 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    font-size: 14px;
-    font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 2.7px;
-    height: auto;
-    border-bottom: 3px solid transparent;
     height: inherit;
+    border-bottom: 3px solid transparent;
+    font-weight: 200;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .navBar .navLinks li span {
+    display: contents;
+    font-weight: 500;
+  }
+  .navBar .navLinks li:hover {
+    border-color: rgba(255, 255, 255, 0.372);
   }
   .navBar .navLinks li:active {
     border-bottom-color: white;
@@ -83,21 +133,20 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    font-weight: 200;
     text-transform: uppercase;
     letter-spacing: 2.7px;
-    height: auto;
-    border-bottom: 3px solid transparent;
     height: inherit;
+    border-bottom: 3px solid transparent;
+    font-weight: 200;
+  }
+  .navBar .navLinks li span {
+    display: contents;
+    font-weight: 500;
   }
   .navBar .navLinks li:hover {
     border-color: rgba(255, 255, 255, 0.372);
   }
   .navBar .navLinks li:active {
     border-bottom-color: white;
-  }
-  .navBar .navLinks li span {
-    display: contents;
-    font-weight: 500;
   }
 }/*# sourceMappingURL=NavBar.module.css.map */
