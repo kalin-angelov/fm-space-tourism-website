@@ -9,28 +9,28 @@
   width: 100%;
 }
 
-.burgerMenu {
+.burgerMenuOpen {
   position: fixed;
   top: 0;
-  right: 0;
-  width: 254px;
   height: 100vh;
   -webkit-backdrop-filter: blur(30px);
           backdrop-filter: blur(30px);
   border: 1px solid black;
-  transition: 0.3s;
+  transition: 0.3s linear;
+  right: 0;
+  width: 254px;
 }
-.burgerMenu .closeButton {
+.burgerMenuOpen .closeButton {
   text-align: right;
   padding-top: 30px;
   padding-right: 20px;
 }
-.burgerMenu .burgerMenuNavLinks {
+.burgerMenuOpen .burgerMenuNavLinks {
   list-style: none;
   padding: 20px 0 20px 10px;
   margin: 20px 0;
 }
-.burgerMenu .burgerMenuNavLinks li {
+.burgerMenuOpen .burgerMenuNavLinks li {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -45,11 +45,55 @@
   border-right: 4px solid white;
   border-right-color: white;
 }
-.burgerMenu .burgerMenuNavLinks li span {
+.burgerMenuOpen .burgerMenuNavLinks li span {
   display: contents;
   font-weight: 500;
 }
-.burgerMenu .burgerMenuNavLinks li:active {
+.burgerMenuOpen .burgerMenuNavLinks li:active {
+  border-right-color: white;
+}
+
+.burgerMenuClose {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  -webkit-backdrop-filter: blur(30px);
+          backdrop-filter: blur(30px);
+  border: 1px solid black;
+  transition: 0.3s linear;
+  right: -254px;
+  width: 0;
+}
+.burgerMenuClose .closeButton {
+  text-align: right;
+  padding-top: 30px;
+  padding-right: 20px;
+}
+.burgerMenuClose .burgerMenuNavLinks {
+  list-style: none;
+  padding: 20px 0 20px 10px;
+  margin: 20px 0;
+}
+.burgerMenuClose .burgerMenuNavLinks li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-transform: uppercase;
+  letter-spacing: 2.7px;
+  height: inherit;
+  border-bottom: 3px solid transparent;
+  font-weight: 200;
+  padding: 17px 6px;
+  margin: 15px 0 15px 10px;
+  height: 31px;
+  border-right: 4px solid white;
+  border-right-color: white;
+}
+.burgerMenuClose .burgerMenuNavLinks li span {
+  display: contents;
+  font-weight: 500;
+}
+.burgerMenuClose .burgerMenuNavLinks li:active {
   border-right-color: white;
 }
 

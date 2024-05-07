@@ -18,27 +18,13 @@
     }
 }
 
-.navBar {
-    position: absolute;
-    top: 5px;
-    padding: 12px 18px;
-    
-   @include flexRow();
-    justify-content: space-between;
-    width: 100%;
-}
-
-// Burger Menu - Start //
-
-.burgerMenu {
+@mixin burgerMenu {
     position: fixed;
     top: 0;
-    right: 0;
-    width: 254px;
     height: 100vh;
     backdrop-filter: blur(30px);
     border: 1px solid black;
-    transition: 0.3s;
+    transition: 0.3s linear;
 
     .closeButton {
         text-align: right;
@@ -63,6 +49,30 @@
             }
         }
     }
+}
+
+.navBar {
+    position: absolute;
+    top: 5px;
+    padding: 12px 18px;
+    
+   @include flexRow();
+    justify-content: space-between;
+    width: 100%;
+}
+
+// Burger Menu - Start //
+
+.burgerMenuOpen {
+   @include burgerMenu();
+   right: 0;
+   width: 254px;
+}
+
+.burgerMenuClose {
+   @include burgerMenu();
+   right: -254px;
+   width: 0;
 }
 
 // Burger Menu - End //
