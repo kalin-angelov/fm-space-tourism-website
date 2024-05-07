@@ -9,7 +9,8 @@ import BurgerMenu from "./BurgerMenu";
 
 const NavBar = () => {
   const [windowWith, setWindowWith] = useState(window.innerWidth);
-  const [showBurgerMenu, setShowBurgerMenu] = useState(false);
+  const [toggle, setToggle] = useState(true);
+  const [showBurgerMenu, setShowBurgerMenu] = useState(styles.burgerMenuClose);
 
   useEffect(() => {
     const handleWindowWith = () => {
@@ -25,20 +26,26 @@ const NavBar = () => {
   },[]);
 
   const toggleBetweenIcons = () => {
-    setShowBurgerMenu(!showBurgerMenu);
+    setToggle(!toggle);
+
+    toggle ? 
+      setShowBurgerMenu(styles.burgerMenuOpen)
+    :
+      setShowBurgerMenu(styles.burgerMenuClose)
   };
 
   return (
     <nav className={styles.navBar}>
       <Link to="/" ><Logo /></Link>
       {windowWith <= 653 ?
-        <div onClick={toggleBetweenIcons}>
-          {showBurgerMenu ?
+        <aside onClick={toggleBetweenIcons}>
+          <div className={showBurgerMenu}>
             <BurgerMenu />
-            :
+          </div>
+          <div>
             <IconHamburger />
-          }
-        </div>
+          </div>
+        </aside>
         :
         <>
           <hr />
