@@ -25,12 +25,12 @@
   padding-top: 30px;
   padding-right: 20px;
 }
-.burgerMenuOpen .burgerMenuNavLinks {
+.burgerMenuOpen ul {
   list-style: none;
   padding: 20px 0 20px 10px;
   margin: 20px 0;
 }
-.burgerMenuOpen .burgerMenuNavLinks li {
+.burgerMenuOpen ul li {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -42,14 +42,13 @@
   padding: 17px 6px;
   margin: 15px 0 15px 10px;
   height: 31px;
-  border-right: 4px solid white;
-  border-right-color: white;
+  border-right: 4px solid transparent;
 }
-.burgerMenuOpen .burgerMenuNavLinks li span {
+.burgerMenuOpen ul li span {
   display: contents;
   font-weight: 500;
 }
-.burgerMenuOpen .burgerMenuNavLinks li:active {
+.burgerMenuOpen ul li:active {
   border-right-color: white;
 }
 
@@ -69,12 +68,12 @@
   padding-top: 30px;
   padding-right: 20px;
 }
-.burgerMenuClose .burgerMenuNavLinks {
+.burgerMenuClose ul {
   list-style: none;
   padding: 20px 0 20px 10px;
   margin: 20px 0;
 }
-.burgerMenuClose .burgerMenuNavLinks li {
+.burgerMenuClose ul li {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -86,14 +85,13 @@
   padding: 17px 6px;
   margin: 15px 0 15px 10px;
   height: 31px;
-  border-right: 4px solid white;
-  border-right-color: white;
+  border-right: 4px solid transparent;
 }
-.burgerMenuClose .burgerMenuNavLinks li span {
+.burgerMenuClose ul li span {
   display: contents;
   font-weight: 500;
 }
-.burgerMenuClose .burgerMenuNavLinks li:active {
+.burgerMenuClose ul li:active {
   border-right-color: white;
 }
 
@@ -106,7 +104,7 @@
   .navBar hr {
     display: none;
   }
-  .navBar .navLinks {
+  .navBar ul {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -118,7 +116,7 @@
     border: 1px solid rgba(255, 255, 255, 0.04);
     list-style: none;
   }
-  .navBar .navLinks li {
+  .navBar ul li {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -130,17 +128,17 @@
     font-size: 14px;
     font-weight: 400;
   }
-  .navBar .navLinks li span {
+  .navBar ul li span {
     display: contents;
     font-weight: 500;
   }
-  .navBar .navLinks li:hover {
+  .navBar ul li:hover {
     border-color: rgba(255, 255, 255, 0.372);
   }
-  .navBar .navLinks li:active {
+  .navBar ul li:active {
     border-bottom-color: white;
   }
-  .navBar .navLinks li span {
+  .navBar ul li span {
     display: none;
   }
 }
@@ -161,7 +159,7 @@
     font-size: 0;
     border: none;
   }
-  .navBar .navLinks {
+  .navBar ul {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -174,7 +172,7 @@
     border: 1px solid rgba(255, 255, 255, 0.04);
     list-style: none;
   }
-  .navBar .navLinks li {
+  .navBar ul li {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -184,14 +182,14 @@
     border-bottom: 3px solid transparent;
     font-weight: 200;
   }
-  .navBar .navLinks li span {
+  .navBar ul li span {
     display: contents;
     font-weight: 500;
   }
-  .navBar .navLinks li:hover {
+  .navBar ul li:hover {
     border-color: rgba(255, 255, 255, 0.372);
   }
-  .navBar .navLinks li:active {
+  .navBar ul li:active {
     border-bottom-color: white;
   }
 }/*# sourceMappingURL=NavBar.module.css.map */

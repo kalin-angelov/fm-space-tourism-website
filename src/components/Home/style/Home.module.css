@@ -5,14 +5,16 @@
   min-height: 100dvh;
   display: flex;
   flex-direction: column;
-  flex-wrap: nowrap;
+  justify-content: center;
   align-items: center;
+  gap: 100px;
 }
 .homeSection .container {
   width: 327px;
   height: 276px;
   text-align: center;
-  margin-top: 90px;
+  padding: 20px 0;
+  margin-top: 40px;
 }
 .homeSection .container .header {
   font-family: "Barlow Condensed", sans-serif;
@@ -21,7 +23,6 @@
   line-height: 1.2;
   letter-spacing: 2.7px;
   text-transform: uppercase;
-  margin-top: 22px;
   color: #D0D6F9;
 }
 .homeSection .container h1 {
@@ -29,7 +30,7 @@
   font-weight: 400;
   font-size: 80px;
   text-transform: uppercase;
-  margin-top: 22px;
+  margin: 22px 0;
 }
 .homeSection .container .description {
   font-family: "Barlow", sans-serif;
@@ -37,26 +38,59 @@
   font-size: 15px;
   line-height: 25px;
   letter-spacing: -0.3px;
-  margin-top: 24px;
+  margin: 24px 0;
   color: #D0D6F9;
 }
-.homeSection .exploreBtn {
-  border: 1px solid white;
-  border-radius: 50%;
+.homeSection .btnContainer {
   width: 150px;
   height: 150px;
+}
+.homeSection .btnContainer .exploreBtn {
+  border: 1px solid white;
+  border-radius: 50%;
+  width: inherit;
+  height: inherit;
   font-size: 23px;
   background-color: white;
   color: black;
   font-family: "Bellefair", sans-serif;
   text-transform: uppercase;
   letter-spacing: 1.25px;
-  margin-top: 104px;
 }
 
-@media screen and (min-width: 798px) {
+@media screen and (min-width: 768px) {
   .homeSection {
     background-image: url("/public/home/background-home-tablet.jpg");
+    padding: 94px 0;
+  }
+  .homeSection .container {
+    width: 450px;
+    height: 334px;
+    padding: 0;
+    margin-top: 0;
+  }
+  .homeSection .container .header {
+    font-size: 20px;
+    letter-spacing: 3.38px;
+    margin: 0;
+  }
+  .homeSection .container h1 {
+    font-size: 150px;
+  }
+  .homeSection .container .description {
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: -0.2px;
+  }
+  .homeSection .btnContainer {
+    width: 242px;
+    height: 242px;
+  }
+  .homeSection .btnContainer .exploreBtn {
+    margin: 70px 0;
+    width: inherit;
+    height: inherit;
+    font-size: 32px;
   }
 }
 @media screen and (min-width: 1020px) {
@@ -85,13 +119,13 @@
     line-height: 32px;
     letter-spacing: 0;
   }
-  .homeSection .exploreBtn {
+  .homeSection .btnContainer .exploreBtn {
     width: 274px;
     height: 274px;
     font-size: 32px;
     margin-top: 290px;
   }
-  .homeSection .exploreBtn:hover {
+  .homeSection .btnContainer .exploreBtn:hover {
     transition: 1s;
     box-shadow: 0px 0px 0px 82px rgba(151, 151, 151, 0.2509803922);
   }
