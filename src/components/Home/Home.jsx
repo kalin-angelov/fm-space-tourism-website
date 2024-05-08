@@ -15,10 +15,13 @@ const Home = () => {
           because we’ll give you a truly out of this world experience!
         </p>
       </article>
-      <button 
-        onClick={(e) => {navigate('/destination')}} 
-        className={styles.exploreBtn}
-      >Explore</button>
+      <div className={styles.btnContainer}>
+        <button 
+          onClick={(e) => {navigate('/destination')}} 
+          className={styles.exploreBtn}
+        >Explore</button>
+      </div>
+      
     </section>
   );
 };
