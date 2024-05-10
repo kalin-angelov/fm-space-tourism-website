@@ -82,7 +82,7 @@
         padding: 0;
         padding-left: 30px;
         
-        hr {
+        .emptySpace {
             display: none;
         }
 
@@ -121,22 +121,27 @@
         top: 30px;
         padding-left: 52px;
         padding-right: 0;
+        
 
-        hr {
-            display: block;
-            position: relative;
-            z-index: 1;
-            left: 50px;
-            width: 473px;
-            height: 1px;
-            background-color: rgba(225, 225, 225, 0.206);
-            font-size: 0;
-            border: none;
-        }
-    
-        ul{
+        .barContainer {
             @include flexRow();
-            justify-content: center;
+            max-width: 90%;
+
+            .emptySpace {
+                display: block;
+                position: relative;
+                z-index: 1;
+                left: 20px;
+                width: 473px;
+                height: 1px;
+                background-color: rgba(225, 225, 225, 0.206);
+                font-size: 0;
+                border: none;
+            }
+        }
+        
+    
+        ul {
             gap: 66px;
     
             width: 830px;

@@ -101,7 +101,7 @@
     padding: 0;
     padding-left: 30px;
   }
-  .navBar hr {
+  .navBar .emptySpace {
     display: none;
   }
   .navBar ul {
@@ -148,11 +148,17 @@
     padding-left: 52px;
     padding-right: 0;
   }
-  .navBar hr {
+  .navBar .barContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 90%;
+  }
+  .navBar .barContainer .emptySpace {
     display: block;
     position: relative;
     z-index: 1;
-    left: 50px;
+    left: 20px;
     width: 473px;
     height: 1px;
     background-color: rgba(225, 225, 225, 0.206);
@@ -160,10 +166,6 @@
     border: none;
   }
   .navBar ul {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
     gap: 66px;
     width: 830px;
     height: 96px;
