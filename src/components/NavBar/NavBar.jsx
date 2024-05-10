@@ -58,8 +58,8 @@ const NavBar = () => {
           </div>
         :
           // The Navigation Bar
-          <div ref={menuRef}>
-            <hr />
+          <div className={styles.barContainer} ref={menuRef}>
+            <div className={styles.emptySpace}></div>
             <NavLinks />
           </div>
       }
