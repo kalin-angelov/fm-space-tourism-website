@@ -112,15 +112,21 @@ $paragraphColor: #D0D6F9;
 @media screen and (min-width: 1020px) {
     .homeSection {
         background-image: url("/public/home/background-home-desktop.jpg");
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
-
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-areas: "description button";
+        grid-template-columns: 1fr 1fr;
+        padding: 135px 165px;
+        
         .container {
             width: 450px;
             height: 382px;
             text-align: start;
-            margin: 165px 0 50px 50px;
+            grid-area: description;
+            align-self: self-end;
+            justify-self: start;
+            
 
             .header {
                 font-size: 28px;
@@ -140,11 +146,18 @@ $paragraphColor: #D0D6F9;
         }
         
         .btnContainer {
+            width: 274px;
+            height: 274px;
+            grid-area: button;
+            align-self: self-end;
+            justify-self: end;
+
             .exploreBtn {
-                width: 274px;
-                height: 274px;
+                width: inherit;
+                height: inherit;
                 font-size: 32px;
-                margin-top: 290px;
+                margin: 0;
+
                 &:hover {
                     transition: 1s;
                     box-shadow: 0px 0px 0px 82px #97979740;

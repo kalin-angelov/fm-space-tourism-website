@@ -96,15 +96,20 @@
 @media screen and (min-width: 1020px) {
   .homeSection {
     background-image: url("/public/home/background-home-desktop.jpg");
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-areas: "description button";
+    grid-template-columns: 1fr 1fr;
+    padding: 135px 165px;
   }
   .homeSection .container {
     width: 450px;
     height: 382px;
     text-align: start;
-    margin: 165px 0 50px 50px;
+    grid-area: description;
+    align-self: self-end;
+    justify-self: start;
   }
   .homeSection .container .header {
     font-size: 28px;
@@ -119,11 +124,18 @@
     line-height: 32px;
     letter-spacing: 0;
   }
-  .homeSection .btnContainer .exploreBtn {
+  .homeSection .btnContainer {
     width: 274px;
     height: 274px;
+    grid-area: button;
+    align-self: self-end;
+    justify-self: end;
+  }
+  .homeSection .btnContainer .exploreBtn {
+    width: inherit;
+    height: inherit;
     font-size: 32px;
-    margin-top: 290px;
+    margin: 0;
   }
   .homeSection .btnContainer .exploreBtn:hover {
     transition: 1s;
