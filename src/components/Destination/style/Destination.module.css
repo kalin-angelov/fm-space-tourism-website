@@ -4,10 +4,112 @@
   background-repeat: no-repeat;
   min-height: 100dvh;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  font-size: 38px;
+  justify-content: center;
+  flex-direction: column;
+}
+.destinationSection h1 {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 100;
+  font-size: 16px;
+  letter-spacing: 2.7px;
+  text-transform: uppercase;
+  color: white;
+  position: absolute;
+  top: 88px;
+}
+.destinationSection h1 span {
+  color: rgba(255, 255, 255, 0.407);
+  font-weight: 400;
+  padding: 6px;
+}
+.destinationSection .destination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.destinationSection .destination .imgContainer {
+  width: 170px;
+  height: 170px;
+  position: absolute;
+  top: 139px;
+}
+.destinationSection .destination .imgContainer img {
+  width: inherit;
+  height: inherit;
+}
+.destinationSection .destination .objectInformation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 13px;
+  position: absolute;
+  top: 335px;
+}
+.destinationSection .destination .objectInformation .objectsList {
+  width: 237.5px;
+  height: 28px;
+  display: flex;
+  flex-direction: row;
+  gap: 27px;
+}
+.destinationSection .destination .objectInformation .objectsList li {
+  color: #D0D6F9;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 100;
+  font-size: 14px;
+  letter-spacing: 2.36px;
+  text-transform: uppercase;
+  list-style: none;
+}
+.destinationSection .destination .objectInformation h2 {
+  width: 187px;
+  height: 64px;
+  font-family: "Bellefair", sans-serif;
+  font-weight: 200;
+  font-size: 56px;
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+.destinationSection .destination .objectInformation p {
+  color: #D0D6F9;
+  width: 327px;
+  height: 125px;
+  text-align: center;
+  font-family: "Barlow", sans-serif;
+  font-weight: 100;
+  font-size: 15px;
+  letter-spacing: 0;
+  line-height: 25px;
+}
+.destinationSection .destination .travelingDistance {
+  width: 327px;
+  text-align: center;
+  border-top: 2px solid #383B4B;
+  margin-top: 13px;
+  padding-top: 23px;
+}
+.destinationSection .destination .travelingDistance ul {
+  list-style: none;
+  text-transform: uppercase;
+  padding: 12px;
+}
+.destinationSection .destination .travelingDistance ul .header {
+  color: #D0D6F9;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 100;
+  letter-spacing: 2.36px;
+  font-size: 14px;
+  margin: 10px;
+}
+.destinationSection .destination .travelingDistance ul .info {
+  font-family: "Bellefair", sans-serif;
+  font-weight: 100;
+  font-size: 28px;
+  letter-spacing: 0;
+  margin: 8px;
 }
 
 @media screen and (min-width: 798px) {
