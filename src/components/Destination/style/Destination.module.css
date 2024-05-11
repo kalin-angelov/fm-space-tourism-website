@@ -56,13 +56,18 @@
   gap: 27px;
 }
 .destinationSection .destination .objectInformation .objectsList li {
+  list-style: none;
+}
+.destinationSection .destination .objectInformation .objectsList li button {
+  cursor: pointer;
   color: #D0D6F9;
   font-family: "Barlow Condensed", sans-serif;
   font-weight: 100;
   font-size: 14px;
   letter-spacing: 2.36px;
   text-transform: uppercase;
-  list-style: none;
+  border: none;
+  background-color: transparent;
 }
 .destinationSection .destination .objectInformation h2 {
   width: 187px;
@@ -112,13 +117,123 @@
   margin: 8px;
 }
 
-@media screen and (min-width: 798px) {
+@media screen and (min-width: 768px) {
   .destinationSection {
     background-image: url("/public/destination/background-destination-tablet.jpg");
+    height: 1024px;
+  }
+  .destinationSection h1 {
+    top: 136px;
+    left: 38.5px;
+    font-size: 20px;
+    letter-spacing: 3.38px;
+  }
+  .destinationSection .destination .imgContainer {
+    width: 300px;
+    height: 300px;
+    top: 220px;
+  }
+  .destinationSection .destination .objectInformation {
+    top: 573px;
+  }
+  .destinationSection .destination .objectInformation .objectsList {
+    width: 285.5px;
+    height: 34px;
+  }
+  .destinationSection .destination .objectInformation .objectsList li button {
+    font-size: 16px;
+    letter-spacing: 2.7px;
+  }
+  .destinationSection .destination .objectInformation h2 {
+    width: 266px;
+    height: 92px;
+    font-size: 80px;
+  }
+  .destinationSection .destination .objectInformation p {
+    width: 573px;
+    height: 84px;
+    font-size: 16px;
+    line-height: 28px;
+  }
+  .destinationSection .destination .objectInformation .travelingDistance {
+    width: 573px;
+    height: 90px;
+    display: block;
+    margin-top: 50px;
+  }
+  .destinationSection .destination .objectInformation .travelingDistance ul {
+    display: inline-block;
+    padding: 12px 50px;
   }
 }
 @media screen and (min-width: 1020px) {
   .destinationSection {
     background-image: url("/public/destination/background-destination-desktop.jpg");
+    height: 900px;
+  }
+  .destinationSection h1 {
+    top: 212px;
+    left: 166.5px;
+    font-size: 28px;
+    letter-spacing: 4.72px;
+  }
+  .destinationSection .destination {
+    margin-top: 210px;
+    display: grid;
+    grid-template-areas: "img information";
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 20%;
+  }
+  .destinationSection .destination .imgContainer {
+    align-self: center;
+    grid-area: img;
+    width: 445px;
+    height: 445px;
+    position: unset;
+  }
+  .destinationSection .destination .objectInformation {
+    width: 445px;
+    height: 472px;
+    grid-area: information;
+    position: unset;
+    justify-content: start;
+    align-items: flex-start;
+  }
+  .destinationSection .destination .objectInformation .objectsList {
+    width: 285.5px;
+    height: 34px;
+  }
+  .destinationSection .destination .objectInformation .objectsList li button {
+    font-size: 16px;
+    letter-spacing: 2.7px;
+  }
+  .destinationSection .destination .objectInformation h2 {
+    width: 333px;
+    height: 155px;
+    font-size: 100px;
+  }
+  .destinationSection .destination .objectInformation p {
+    text-align: unset;
+    width: 456px;
+    height: 128px;
+    font-size: 18px;
+    line-height: 32px;
+  }
+  .destinationSection .destination .objectInformation .travelingDistance {
+    text-align: start;
+    width: 444px;
+    height: 90px;
+    display: block;
+    margin-top: 50px;
+  }
+  .destinationSection .destination .objectInformation .travelingDistance ul {
+    display: inline-block;
+    padding: 0;
+    padding-right: 70px;
+  }
+  .destinationSection .destination .objectInformation .travelingDistance ul .info {
+    margin: 8px 0;
   }
 }/*# sourceMappingURL=Destination.module.css.map */
