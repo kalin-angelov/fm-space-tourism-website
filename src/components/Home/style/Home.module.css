@@ -61,7 +61,7 @@
 @media screen and (min-width: 768px) {
   .homeSection {
     background-image: url("/public/home/background-home-tablet.jpg");
-    padding: 94px 0;
+    padding: 140px 0;
   }
   .homeSection .container {
     width: 450px;
