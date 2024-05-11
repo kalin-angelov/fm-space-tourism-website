@@ -1,38 +1,38 @@
 import styles from "./style/Destination.module.css";
 
-import { Link } from "react-router-dom";
+import data from "../../db/data.json";
+
+import { useState } from "react";
 
 const Destination = () => {
+  const [destination, setDestination] = useState(data.destinations[0]);
+
   return (
     <section className={styles.destinationSection}>
       <h1><span>01</span> Pick your destination</h1>
       <div className={styles.destination}>
         <figure className={styles.imgContainer}>
-          <img src="/public/destination/image-moon.png" alt="Moon" />
+          <img src={destination.images.png} alt={destination.name} />
         </figure>
       
         <article className={styles.objectInformation}>
           <ul className={styles.objectsList}>
-            <li><Link>Moon</Link></li>
-            <li><Link>Mars</Link></li>
-            <li><Link>Europa</Link></li>
-            <li><Link>Titan</Link></li>
+            <li><button onClick={() => {setDestination(data.destinations[0])}} name="Moon">Moon</button></li>
+            <li><button onClick={() => {setDestination(data.destinations[1])}} name="Mars">Mars</button></li>
+            <li><button onClick={() => {setDestination(data.destinations[2])}} name="Europe">Europa</button></li>
+            <li><button onClick={() => {setDestination(data.destinations[3])}} name="Titan">Titan</button></li>
           </ul>
-          <h2>Moon</h2>
-          <p>
-            See our planet as you’ve never seen it before. A perfect relaxing trip away to help 
-            regain perspective and come back refreshed. While you’re there, take in some history 
-            by visiting the Luna 2 and Apollo 11 landing sites.
-          </p>
+          <h2>{destination.name}</h2>
+          <p>{destination.description}</p>
 
           <div className={styles.travelingDistance}>
             <ul>
               <li className={styles.heder}>Avg. distance</li>
-              <li className={styles.info}>384,400 km</li>
+              <li className={styles.info}>{destination.distance}</li>
             </ul>
             <ul>
               <li className={styles.heder}>Est. travel time</li>
-              <li className={styles.info}>3 days</li>
+              <li className={styles.info}>{destination.travel}</li>
             </ul>
           </div>
         </article>
