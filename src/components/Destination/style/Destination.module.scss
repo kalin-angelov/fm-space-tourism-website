@@ -12,6 +12,7 @@ $colorD0D6F9: #D0D6F9;
     background-repeat: no-repeat;
     background-position: center;
     min-height: 100dvh;
+    height: 850px;
     background-color: whitesmoke;
     z-index: 1;
     
@@ -153,7 +154,7 @@ $colorD0D6F9: #D0D6F9;
     }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 654px) {
     .destinationSection {
         background-image: url("/public/destination/background-destination-tablet.jpg");
         height: 1024px;
@@ -237,7 +238,7 @@ $colorD0D6F9: #D0D6F9;
             grid-template-columns: 1fr 1fr;
             justify-content: center;
             align-items: center;
-            gap: 20%;
+            gap: 13%;
 
             .imgContainer {
                 align-self: center;

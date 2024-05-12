@@ -4,6 +4,7 @@
   background-repeat: no-repeat;
   background-position: center;
   min-height: 100dvh;
+  height: 850px;
   background-color: whitesmoke;
   z-index: 1;
   display: flex;
@@ -132,7 +133,7 @@
     transform: rotate(360deg);
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 654px) {
   .destinationSection {
     background-image: url("/public/destination/background-destination-tablet.jpg");
     height: 1024px;
@@ -199,7 +200,7 @@
     grid-template-columns: 1fr 1fr;
     justify-content: center;
     align-items: center;
-    gap: 20%;
+    gap: 13%;
   }
   .destinationSection .destination .imgContainer {
     align-self: center;

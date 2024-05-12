@@ -60,7 +60,7 @@ const NavBar = () => {
           // The Navigation Bar
           <div className={styles.barContainer} ref={menuRef}>
             <div className={styles.emptySpace}></div>
-            <NavLinks />
+            <NavLinks windowWith={windowWith}/>
           </div>
       }
     </nav>

@@ -18,10 +18,10 @@ const Destination = () => {
       
         <article className={styles.objectInformation}>
           <ul className={styles.objectsList}>
-            <li><button onClick={() => {setDestination(data.destinations[0])}} name="Moon">Moon</button></li>
-            <li><button onClick={() => {setDestination(data.destinations[1])}} name="Mars">Mars</button></li>
-            <li><button onClick={() => {setDestination(data.destinations[2])}} name="Europe">Europa</button></li>
-            <li><button onClick={() => {setDestination(data.destinations[3])}} name="Titan">Titan</button></li>
+            <li style={destination.name === "Moon" ? {borderBottom: "3px solid white"} : null}><button onClick={() => {setDestination(data.destinations[0])}} name="Moon">Moon</button></li>
+            <li style={destination.name === "Mars" ? {borderBottom: "3px solid white"} : null}><button onClick={() => {setDestination(data.destinations[1])}} name="Mars">Mars</button></li>
+            <li style={destination.name === "Europa" ? {borderBottom: "3px solid white"} : null}><button onClick={() => {setDestination(data.destinations[2])}} name="Europe">Europa</button></li>
+            <li style={destination.name === "Titan" ? {borderBottom: "3px solid white"} : null}><button onClick={() => {setDestination(data.destinations[3])}} name="Titan">Titan</button></li>
           </ul>
           <h2>{destination.name}</h2>
           <p>{destination.description}</p>

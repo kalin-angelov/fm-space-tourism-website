@@ -2,21 +2,153 @@
   background-image: url("/public/crew/background-crew-mobile.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   min-height: 100dvh;
+  height: 710px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  font-size: 38px;
+  justify-content: center;
+  flex-direction: column;
+}
+.crewSection h1 {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 100;
+  font-size: 16px;
+  letter-spacing: 2.7px;
+  text-transform: uppercase;
+  color: white;
+  position: absolute;
+  top: 88px;
+}
+.crewSection h1 span {
+  color: rgba(255, 255, 255, 0.407);
+  font-weight: 400;
+  padding: 6px;
+}
+.crewSection .member {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.crewSection .member .imgContainer {
+  width: 327px;
+  height: 223px;
+  position: absolute;
+  top: 139px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.407);
+  text-align: center;
+}
+.crewSection .member .imgContainer img {
+  width: 180px;
+  height: 222px;
+}
+.crewSection .member .memberInformation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 13px;
+  position: absolute;
+  top: 394px;
+}
+.crewSection .member .memberInformation .crewList {
+  width: 88px;
+  height: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 17px;
+}
+.crewSection .member .memberInformation .crewList li {
+  list-style: none;
+  border: 5px solid rgba(255, 255, 255, 0);
+  border-radius: 100%;
+  cursor: pointer;
+}
+.crewSection .member .memberInformation .crewList li button {
+  display: none;
+}
+.crewSection .member .memberInformation h2 {
+  font-family: "Bellefair", sans-serif;
+  font-weight: 200;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.407);
+}
+.crewSection .member .memberInformation h3 {
+  font-family: "Bellefair", sans-serif;
+  font-weight: 200;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  font-size: 24px;
+}
+.crewSection .member .memberInformation p {
+  color: #D0D6F9;
+  width: 327px;
+  height: 125px;
+  text-align: center;
+  font-family: "Barlow", sans-serif;
+  font-weight: 100;
+  font-size: 14.5px;
+  letter-spacing: 0;
+  line-height: 25px;
 }
 
-@media screen and (min-width: 798px) {
+@media screen and (min-width: 654px) {
   .crewSection {
     background-image: url("/public/crew/background-crew-tablet.jpg");
+    height: 1024px;
+  }
+  .crewSection h1 {
+    top: 136px;
+    left: 38.5px;
+    font-size: 20px;
+    letter-spacing: 3.38px;
+  }
+  .crewSection h1 span {
+    color: rgba(255, 255, 255, 0.407);
+    font-weight: 400;
+    padding: 6px;
+  }
+  .crewSection .member .imgContainer {
+    width: 456.4px;
+    height: 528px;
+    top: 492px;
+    border-bottom: none;
+  }
+  .crewSection .member .imgContainer img {
+    width: inherit;
+    height: inherit;
+  }
+  .crewSection .member .memberInformation {
+    top: 210px;
+    gap: 10px;
+  }
+  .crewSection .member .memberInformation .crewList {
+    order: 4;
+    margin-top: 50px;
+  }
+  .crewSection .member .memberInformation h2 {
+    order: 1;
+    font-size: 24px;
+  }
+  .crewSection .member .memberInformation h3 {
+    order: 2;
+    font-size: 40px;
+  }
+  .crewSection .member .memberInformation p {
+    order: 3;
+    width: 520px;
+    height: 84px;
+    font-size: 16px;
+    line-height: 28px;
+    padding: 10px;
   }
 }
-@media screen and (min-width: 1020px) {
+@media screen and (min-width: 1024px) {
   .crewSection {
     background-image: url("/public/crew/background-crew-desktop.jpg");
+    height: 900px;
   }
 }/*# sourceMappingURL=Crew.module.css.map */

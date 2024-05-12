@@ -19,6 +19,7 @@
   transition: 0.3s linear;
   right: 0;
   width: 254px;
+  z-index: 1;
 }
 .burgerMenuOpen .closeButton {
   text-align: right;

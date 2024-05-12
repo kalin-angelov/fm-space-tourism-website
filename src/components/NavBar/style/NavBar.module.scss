@@ -66,6 +66,7 @@
     @include burgerMenu();
     right: 0;
     width: 254px;
+    z-index: 1;
 }
 
 .burgerMenuClose {
