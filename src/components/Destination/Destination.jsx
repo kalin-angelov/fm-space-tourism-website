@@ -6,16 +6,25 @@ import { useState } from "react";
 
 const Destination = () => {
   const [destination, setDestination] = useState(data.destinations[0]);
+  const generateImgUrl = (image) => {
+    const URL = "http://127.0.0.1:5173/";
+    const cut = String(image).slice(8);
+    const imgUrl = URL + cut;
+    console.log(cut);
+    return imgUrl;
+  }
 
   return (
     <section className={styles.destinationSection}>
+      
       <h1><span>01</span> Pick your destination</h1>
       <div className={styles.destination}>
         <figure className={styles.imgContainer}>
-          <img src={destination.images.png} alt={destination.name} />
+          <img src={generateImgUrl(destination.images.png)} alt={destination.name} />
         </figure>
       
         <article className={styles.objectInformation}>
+        <button onClick={() => generateImgUrl(destination.images.png)}>Test</button>
           <ul className={styles.objectsList}>
             <li><button onClick={() => {setDestination(data.destinations[0])}} name="Moon">Moon</button></li>
             <li><button onClick={() => {setDestination(data.destinations[1])}} name="Mars">Mars</button></li>

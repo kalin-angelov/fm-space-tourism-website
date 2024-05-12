@@ -10,8 +10,11 @@ $colorD0D6F9: #D0D6F9;
     background-image: url("/public/destination/background-destination-mobile.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     min-height: 100dvh;
-
+    background-color: whitesmoke;
+    z-index: 1;
+    
     @include flex();
     flex-direction: column;
 
@@ -41,6 +44,10 @@ $colorD0D6F9: #D0D6F9;
             height: 170px;
             position: absolute;
             top: 139px;
+            animation-name: spin-me;
+            animation-duration: 30000ms;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
     
             img {
                 width: inherit;
@@ -134,6 +141,16 @@ $colorD0D6F9: #D0D6F9;
     }
 
    
+}
+
+@keyframes spin-me {
+    from {
+        transform:rotate(0deg);
+    }
+
+    to {
+        transform:rotate(360deg);
+    }
 }
 
 @media screen and (min-width: 768px) {

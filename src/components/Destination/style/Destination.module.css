@@ -2,7 +2,10 @@
   background-image: url("/public/destination/background-destination-mobile.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   min-height: 100dvh;
+  background-color: whitesmoke;
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -34,6 +37,10 @@
   height: 170px;
   position: absolute;
   top: 139px;
+  animation-name: spin-me;
+  animation-duration: 30000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 .destinationSection .destination .imgContainer img {
   width: inherit;
@@ -117,6 +124,14 @@
   margin: 8px;
 }
 
+@keyframes spin-me {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 @media screen and (min-width: 768px) {
   .destinationSection {
     background-image: url("/public/destination/background-destination-tablet.jpg");
