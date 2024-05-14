@@ -25,9 +25,10 @@ Users should be able to:
 
 ### Screenshot
 
-![./public/screenshots/Screenshot (1).png](./screenshot.jpg)
-![./public/screenshots/Screenshot (3).png](./screenshot.jpg)
-![./public/screenshots/Screenshot (4).png](./screenshot.jpg)
+![Laptop Screenshot](./public/screenshots/Screenshot%20(1).png)
+![Tablet Screenshot](./public/screenshots/Screenshot%20(3).png)
+![Mobile Screenshot](./public/screenshots/Screenshot%20(4).png)
+
 
 ### Links
 
