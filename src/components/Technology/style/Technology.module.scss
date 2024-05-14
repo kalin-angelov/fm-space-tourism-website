@@ -58,33 +58,40 @@ $colorD0D6F9: #D0D6F9;
             }
         }
 
+        .machineList {
+            position: absolute;
+            top: 343px;
+            width: 152px;
+            height: 40px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            li {
+                list-style: none;
+                button {
+                    width: 40px;
+                    height: 40px;
+                    font-family: "Bellefair", sans-serif;
+                    font-weight: 100;
+                    font-size: 16px;
+                    letter-spacing: 1px;
+                    border-radius: 100%;
+                    border: 1px solid white;
+                    cursor: pointer;
+                }
+            }
+        }
+
         .machineInformation {
            @include flex();
             flex-direction: column;
             gap: 13px;
             position: absolute;
-            top: 343px;
+            top: 409px;
             width: 327px;
 
-            .machineList {
-                width: 152px;
-                height: 40px;
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-
-                li {
-                    list-style: none;
-                    button {
-                        width: 40px;
-                        height: 40px;
-                        border-radius: 100%;
-                        border: 1px solid white;
-                        cursor: pointer;
-                    }
-                }
-            }
-
+           
             h2 {
                 font-family: "Barlow Condensed", sans-serif;
                 font-weight: 100;
@@ -112,14 +119,176 @@ $colorD0D6F9: #D0D6F9;
     }
 }
 
-@media screen and (min-width: 798px) {
+@media screen and (min-width: 654px) {
     .technologySection {
         background-image: url("/public/technology/background-technology-tablet.jpg");
+        height: 1024px;
+        
+        h1 {
+            font-size: 20px;
+            letter-spacing: 3.38px;
+            top: 136px;
+            left: 38.5px;
+        }
+
+        .machine {
+            .imgContainer {
+                width: 100%;
+                height: 310px;
+                top: 220px;
+            }
+
+            .machineList {
+                top: 586px;
+                width: 210px;
+                height: 60px;
+
+                li {
+                    button {
+                        width: 60px;
+                        height: 60px;
+                        font-size: 24px;
+                        letter-spacing: 1.5px;
+                    }
+                }
+            }
+
+            .machineInformation {
+                top: 690px;
+                width: 458px;
+
+                h2 {
+                    letter-spacing: 2.7px;
+                    font-size: 16px;
+                }
+
+                h3 {
+                    font-size: 40px;
+                }
+
+                p {
+                    font-size: 16px;
+                    letter-spacing: 0;
+                    line-height: 28px;
+                }
+            }
+        }
     }
 }
 
-@media screen and (min-width: 1020px) {
+@media screen and (min-width: 1024px) {
     .technologySection {
         background-image: url("/public/technology/background-technology-desktop.jpg");
+        height: 900px;
+
+        h1 {
+            top: 212px;
+            left: 166.5px;
+        }
+
+        .machine {
+            display: grid;
+            grid-template-areas: "navList information image";
+            grid-template-columns: 60px 435px 395px;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+
+            .imgContainer {
+                position: unset;
+                grid-area: image;
+            }
+
+            .machineList {
+                grid-area: navList;
+                position: unset;
+                flex-direction: column;
+                gap: 24px;
+                width: inherit;
+                height: inherit;
+            }
+
+            .machineInformation {
+                grid-area: information;
+                position: unset;
+                align-items: flex-start;
+                width: inherit;
+
+                p {
+                    text-align: start;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .technologySection {
+        h1 {
+            font-size: 28px;
+            letter-spacing: 4.72px;
+            top: 212px;
+            left: 166.5px;
+        }
+
+        .machine {
+            margin-top: 150px;
+            grid-template-columns: 80px 572px 515px;
+            justify-content: center;
+            align-items: center;
+            gap: 0px;
+            
+            .imgContainer {
+                position: unset;
+                grid-area: image;
+                width: 515px;
+                height: 527px;
+                margin-left: 138px;
+            }
+
+            .machineList {
+                grid-area: navList;
+                position: unset;
+                flex-direction: column;
+                gap: 34px;
+                width: inherit;
+                height: inherit;
+                margin-left: 32px;
+
+                li {
+                    button {
+                        width: 80px;
+                        height: 80px;
+                        font-size: 32px;
+                        letter-spacing: 2px;
+                    }
+                }
+            }
+
+            .machineInformation {
+                grid-area: information;
+                position: unset;
+                align-items: flex-start;
+                width: inherit;
+                margin-left: 50px;
+                padding-left: 50px;
+
+                h2 {
+                    letter-spacing: 2.7px;
+                    font-size: 16px;
+                }
+
+                h3 {
+                    font-size: 56px;
+                }
+
+                p {
+                    text-align: start;
+                    font-size: 18px;
+                    line-height: 32px;
+                    margin-right: 5px;
+                }
+            }
+        }
     }
 }
