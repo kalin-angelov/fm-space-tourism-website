@@ -25,9 +25,9 @@ Users should be able to:
 
 ### Screenshot
 
-![/screenshots/Screenshot (1).png](./screenshot.jpg)
-![/screenshots/Screenshot (3).png](./screenshot.jpg)
-![/screenshots/Screenshot (4).png](./screenshot.jpg)
+![./public/screenshots/Screenshot (1).png](./screenshot.jpg)
+![./public/screenshots/Screenshot (3).png](./screenshot.jpg)
+![./public/screenshots/Screenshot (4).png](./screenshot.jpg)
 
 ### Links
 
