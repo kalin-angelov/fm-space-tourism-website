@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 
-const NavLinks = ({windowWith}) => {
+const NavLinks = ({ windowWith }) => {
   const location = useLocation();
   const { pathname } = location;
   const windowWithChecker = windowWith >= 653 ? 
