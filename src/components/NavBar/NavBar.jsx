@@ -1,7 +1,9 @@
 import styles from "./style/NavBar.module.css";
 
 import { Link } from "react-router-dom";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, useContext } from "react";
+
+import { Context } from "../../context/Context";
 
 import Logo from "/public/shared/Logo";
 import IconHamburger from "/public/shared/IconHamburger";
@@ -10,7 +12,7 @@ import NavLinks from "./NavLinks";
 
 const NavBar = () => {
   const menuRef = useRef();
-  const [windowWith, setWindowWith] = useState(window.innerWidth);  
+  const { windowWith } = useContext(Context);
   const [toggle, setToggle] = useState(false);
 
   const toggleIconsAndStyles = () => {
@@ -27,14 +29,7 @@ const NavBar = () => {
 
     window.addEventListener("mousedown", closeBurgerMenu);
 
-    const handleWindowWith = () => {
-      setWindowWith(window.innerWidth);
-    };
-
-    window.addEventListener("resize", handleWindowWith);
-
     return () => {
-      window.removeEventListener("resize", handleWindowWith);
       window.removeEventListener("mousedown",closeBurgerMenu);
     };
 
