@@ -2,12 +2,95 @@
   background-image: url("/public/technology/background-technology-mobile.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   min-height: 100dvh;
+  height: 710px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  font-size: 38px;
+  justify-content: center;
+  flex-direction: column;
+}
+.technologySection h1 {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 100;
+  font-size: 16px;
+  letter-spacing: 2.7px;
+  text-transform: uppercase;
+  color: white;
+  position: absolute;
+  top: 88px;
+}
+.technologySection h1 span {
+  color: rgba(255, 255, 255, 0.407);
+  font-weight: 400;
+  padding: 6px;
+}
+.technologySection .machine {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.technologySection .machine .imgContainer {
+  width: 100%;
+  height: 170px;
+  position: absolute;
+  top: 139px;
+}
+.technologySection .machine .imgContainer img {
+  width: inherit;
+  height: inherit;
+}
+.technologySection .machine .machineInformation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 13px;
+  position: absolute;
+  top: 343px;
+  width: 327px;
+}
+.technologySection .machine .machineInformation .machineList {
+  width: 152px;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.technologySection .machine .machineInformation .machineList li {
+  list-style: none;
+}
+.technologySection .machine .machineInformation .machineList li button {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  border: 1px solid white;
+  cursor: pointer;
+}
+.technologySection .machine .machineInformation h2 {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 100;
+  letter-spacing: 2.36px;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #D0D6F9;
+}
+.technologySection .machine .machineInformation h3 {
+  font-family: "Bellefair", sans-serif;
+  font-weight: 200;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  font-size: 24px;
+}
+.technologySection .machine .machineInformation p {
+  color: #D0D6F9;
+  font-family: "Barlow", sans-serif;
+  font-weight: 100;
+  font-size: 15px;
+  letter-spacing: 0;
+  line-height: 25px;
+  text-align: center;
 }
 
 @media screen and (min-width: 798px) {
