@@ -53,7 +53,7 @@
 .navBar {
     position: absolute;
     top: 24px;
-    padding: 12px 18px;
+    padding: 0px 18px;
     
    @include flexRow();
     justify-content: space-between;
