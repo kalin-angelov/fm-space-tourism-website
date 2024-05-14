@@ -37,7 +37,7 @@ const NavBar = () => {
 
   return (
     <nav className={styles.navBar}>
-      <Link to="/" ><Logo /></Link>
+      <Link to="/" aria-label="Go To Home Page" title="Go To Home Page" ><Logo /></Link>
       {
       // If the page with is less than 653px it's going to show the Burger Menu else it will show the Navigation Bar
         windowWith <= 653 ?
