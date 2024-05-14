@@ -145,7 +145,7 @@
 }
 @media screen and (min-width: 1024px) {
   .navBar {
-    top: 30px;
+    top: 40px;
     padding-left: 52px;
     padding-right: 0;
   }
@@ -159,8 +159,8 @@
     display: block;
     position: relative;
     z-index: 1;
-    left: 50px;
-    width: 473px;
+    left: 15px;
+    width: 250px;
     height: 1px;
     background-color: rgba(225, 225, 225, 0.206);
     font-size: 0;
@@ -194,5 +194,11 @@
   }
   .navBar ul li:active {
     border-bottom-color: white;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .navBar .barContainer .emptySpace {
+    left: 50px;
+    width: 473px;
   }
 }/*# sourceMappingURL=NavBar.module.css.map */
