@@ -10,11 +10,11 @@
     letter-spacing: 2.7px;
     height: inherit;
     border-bottom: 3px solid transparent;
-    font-weight: 200;
+    font-weight: normal;
 
     span {
         display: contents;
-        font-weight: 500;
+        font-weight: bold;
     }
 }
 
@@ -94,7 +94,7 @@
     
             width: 450px;
             height: 96px;
-            background-color: rgba(255, 255, 255, 0.04);
+            background-color: rgba(255, 255, 255, 0.081);
             border: 1px solid rgba(255, 255, 255, 0.04);
             list-style: none;
 
@@ -147,7 +147,7 @@
     
             width: 830px;
             height: 96px;
-            backdrop-filter: blur(30px);
+            backdrop-filter: blur(81.55px);
             border: 1px solid rgba(255, 255, 255, 0.04);
             list-style: none;
 
@@ -155,9 +155,6 @@
                 @include liStyle();
                 &:hover {
                     border-color: rgba(255, 255, 255, 0.372);
-                }
-                &:active {
-                    border-bottom-color: white;
                 }
             }   
         }

@@ -25,7 +25,7 @@
   text-transform: uppercase;
   color: #D0D6F9;
 }
-.homeSection .container h1 {
+.homeSection .container h2 {
   font-family: "Bellefair", sans-serif;
   font-weight: 400;
   font-size: 80px;
@@ -74,7 +74,7 @@
     letter-spacing: 3.38px;
     margin: 0;
   }
-  .homeSection .container h1 {
+  .homeSection .container h2 {
     font-size: 150px;
   }
   .homeSection .container .description {
@@ -116,7 +116,7 @@
     letter-spacing: 4.72px;
     margin: 0;
   }
-  .homeSection .container h1 {
+  .homeSection .container h2 {
     font-size: 150px;
   }
   .homeSection .container .description {
