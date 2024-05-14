@@ -2,21 +2,27 @@ import styles from "./style/Technology.module.css";
 
 import data from "../../db/data.json";
 
-import { useState } from "react";
+import { useState, useContext } from "react";
+
+import { Context } from "../../context/Context";
 
 const Technology = () => {
   const [tech, setTech] = useState(data.technology[0]);
-  
+  const { windowWith } = useContext(Context);
+
   return (
     <section className={styles.technologySection}>
       <h1><span>03</span> Space launch 101</h1>
       <div className={styles.machine}>
         <figure className={styles.imgContainer}>
-          <img src={tech.images.landscape} alt={tech.name} />
+          <img src={windowWith <= 768 ? 
+              tech.images.landscape 
+              : 
+              tech.images.portrait
+            } alt={tech.name} />
         </figure>
-      
-        <article className={styles.machineInformation}>
-          <ul className={styles.machineList}>
+
+        <ul className={styles.machineList}>
             <li>
               <button
                 onClick={() => {setTech(data.technology[0])}}
@@ -48,6 +54,8 @@ const Technology = () => {
               >3</button>
             </li>
           </ul>
+      
+        <article className={styles.machineInformation}>
           <h2>The terminology ...</h2>
           <h3>{tech.name}</h3>
           <p>{tech.description}</p>
