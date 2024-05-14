@@ -70,9 +70,11 @@ $colorD0D6F9: #D0D6F9;
                 height: 10px;
                 display: flex;
                 flex-direction: row;
-                gap: 17px;
+                justify-content: space-between;
 
                 li {
+                    width: 14px;
+                    height: 14px;
                     list-style: none;
                     border: 5px solid rgba(255, 255, 255, 0);
                     border-radius: 100%;
@@ -120,12 +122,6 @@ $colorD0D6F9: #D0D6F9;
             left: 38.5px;
             font-size: 20px;
             letter-spacing: 3.38px;
-
-            span {
-                color: rgba(255, 255, 255, 0.407);
-                font-weight: 400;
-                padding: 6px;
-            }
         }
     
         .member {
@@ -167,7 +163,6 @@ $colorD0D6F9: #D0D6F9;
                     height: 84px;
                     font-size: 16px;
                     line-height: 28px;
-                    padding: 10px;
                 }
             }
         }
@@ -178,5 +173,92 @@ $colorD0D6F9: #D0D6F9;
     .crewSection {
         background-image: url("/public/crew/background-crew-desktop.jpg");
         height: 900px;
+        justify-content: flex-end;
+
+        h1 {
+            top: 270px
+        }
+        
+        .member {
+            display: grid;
+            grid-template-areas: "information image";
+            grid-template-columns: 500px 434px;
+
+            .imgContainer {
+                grid-area: image;
+                position: unset;
+                align-self: center;
+                justify-self: center;
+            }
+    
+            .memberInformation {
+                grid-area: information;
+                position: unset;
+                align-items: start;
+
+                p {
+                    text-align: start;
+                }
+            }
+
+        }
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .crewSection {
+        h1 {
+            top: 212px;
+            left: 166.5px;
+            font-size: 28px;
+            letter-spacing: 4.72px;
+        }
+    
+        .member {
+            grid-template-columns: 614px 491px;
+
+            .imgContainer {
+                width: 568.07px;
+                height: 663px;
+
+                img {
+                    width: 510px;
+                    height: inherit;
+                }
+            }
+    
+            .memberInformation {
+                margin-top: 40px;
+                width: 614px;
+
+                .crewList {
+                    order: 4;
+                    margin-top: 90px;
+                    width: 132px;
+                    height: 15px;
+
+                    li {
+                        width: 15px;
+                        height: 15px;
+                    }
+                }
+    
+                h2 {
+                    font-size: 32px;
+                }
+    
+                h3 {
+                    font-size: 56px;
+                    margin: 12px 0;
+                }
+    
+                p {
+                    width: 444px;
+                    height: 128px;
+                    font-size: 18px;
+                    line-height: 32px;
+                }
+            }
+        }
     }
 }
